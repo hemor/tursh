@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        {% csrf_token %}
+        <p style="color: red; font-weight: bold; visibility: hidden" id="pFullUrlError">full url error</p>
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="full_url" id="shortenedUrl" placeholder="Enter Full URL" maxlength="2000"/>
+            </div>
+            <div class="col-xs-3" id="btnDiv">
+                <button class="form-control btn-primary" type="button" id="submitForm">Shrink</button>
+            </div>
+        </div>
+        <p style="color: red; font-weight: bold; visibility: hidden" id="pShortUrlError">short url error</p>
+        <div class="row">
+            <div class="col-xs-9">
+                <input type="text" class="form-control input-md" name="short_url" placeholder="Enter short URL" data-bind="visible: customShortUrl" maxlength="6"/>
+            </div>
+        </div>
+        <div class="row">
+            <input id="chkShortUrl" type="checkbox" style="margin-left: 15px; margin-top: 10px" data-bind="checked: customShortUrl"/>Custom short url
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <h3 class="text-center">How to embed widget on your website</h3>
+        <p class="text-left">1. Add &lt;script type="text/javascript" src="http://www.tursh.net/widget/"&gt;&lt;/script&gt; to the head or below the body of your website.</p>
+        <p class="text-left">2. Add &lt;div id="tursh_widget" widgetType="short" customStyle="false"&gt;&lt;/div&gt;</p>
+        <p class="text-left">* id="tursh_widget" is compulsory. The div with that id will contain the widget's html. You have to make sure you don't have more than 1 element with that id.</p>
+        <p class="text-left">* widgetType="short" or widgetType="long". Default is short. If no widgetType is specified or an invalid value was specified, the default value is used.</p>
+<p class="text-left">* customStyle="false" or customStyle="true". Default is false. It is used to specify whether you want to apply a customStyle or not. If no value is specified or an invalid value is specified, the default value is used.</p>
+    </div>
+{% endblock %}

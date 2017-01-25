@@ -1,0 +1,14 @@
+logs/*
+__pycache__
+*.pyc
+*.pyo
+*/staticfiles/*
+*.swp
+docker-compose.yml
+Dockerfile
+*.env
+.vscode
+.ropeproject
+.idea
+*.sqlite3
+prod_settings.py
