@@ -16,7 +16,7 @@ DATABASES = {
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'tursh.net', 'www.tursh.net', 'ec2-54-202-172-151.us-west-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['localhost', 'tursh.net', 'www.tursh.net', 'ec2-52-26-142-101.us-west-2.compute.amazonaws.com']
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
